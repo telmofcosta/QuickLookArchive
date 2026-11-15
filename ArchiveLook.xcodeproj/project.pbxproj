@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		768EF7E099F8D862E1335B22 /* ArchiveLookPreview.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6228BE538A0F541A69784728 /* ArchiveLookPreview.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		813200C24309DCEF2D0755D4 /* ArchiveTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D471858B41FCB72F6F47B67 /* ArchiveTree.swift */; };
 		858695E53CC09AC0A451D367 /* ArchiveLookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29205AAE6DF8006773411D /* ArchiveLookApp.swift */; };
 		BDB66571F33461FEE9B341F6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478807AB6D373F2D9A7F2D84 /* PreviewViewController.swift */; };
 		EBC9E5A95A8863F5DF1AD3DF /* ArchiveReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD2808B0AEC992113447DA /* ArchiveReader.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D471858B41FCB72F6F47B67 /* ArchiveTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveTree.swift; sourceTree = "<group>"; };
 		38FD2808B0AEC992113447DA /* ArchiveReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveReader.swift; sourceTree = "<group>"; };
 		478807AB6D373F2D9A7F2D84 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		6228BE538A0F541A69784728 /* ArchiveLookPreview.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ArchiveLookPreview.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				38FD2808B0AEC992113447DA /* ArchiveReader.swift */,
+				2D471858B41FCB72F6F47B67 /* ArchiveTree.swift */,
 				712FA2D84C4F892A652FCAEC /* CArchive.h */,
 				9B5A2BC4795D54815CA74CD2 /* Extension.entitlements */,
 				AFF8DFE46F7881BD4E0FF712 /* Info.plist */,
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC9E5A95A8863F5DF1AD3DF /* ArchiveReader.swift in Sources */,
+				813200C24309DCEF2D0755D4 /* ArchiveTree.swift in Sources */,
 				BDB66571F33461FEE9B341F6 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
