@@ -53,7 +53,7 @@ rm -rf ~/Applications/QuickLookArchive.app
 cp -R build/Build/Products/Debug/QuickLookArchive.app ~/Applications/
 $LSR -f -R ~/Applications/QuickLookArchive.app
 pluginkit -a ~/Applications/QuickLookArchive.app/Contents/PlugIns/QuickLookArchivePreview.appex
-pluginkit -e use -i local.quicklookarchive.app.preview
+pluginkit -e use -i pt.telmofcosta.quicklookarchive.preview
 killall quicklookd QuickLookUIService
 qlmanage -r
 ```

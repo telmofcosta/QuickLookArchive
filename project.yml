@@ -1,6 +1,6 @@
 name: QuickLookArchive
 options:
-  bundleIdPrefix: local.quicklookarchive
+  bundleIdPrefix: pt.telmofcosta
   deploymentTarget:
     macOS: "14.0"
 settings:
@@ -21,7 +21,7 @@ targets:
         NSPrincipalClass: NSApplication
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: local.quicklookarchive.app
+        PRODUCT_BUNDLE_IDENTIFIER: pt.telmofcosta.quicklookarchive
     dependencies:
       - target: QuickLookArchivePreview
         embed: true
@@ -67,6 +67,6 @@ targets:
         com.apple.security.app-sandbox: true
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: local.quicklookarchive.app.preview
+        PRODUCT_BUNDLE_IDENTIFIER: pt.telmofcosta.quicklookarchive.preview
         SWIFT_OBJC_BRIDGING_HEADER: Extension/CArchive.h
         OTHER_LDFLAGS: -larchive

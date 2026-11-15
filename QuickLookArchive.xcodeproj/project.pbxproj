@@ -273,7 +273,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = local.quicklookarchive.app;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.telmofcosta.quicklookarchive;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -288,7 +288,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = local.quicklookarchive.app;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.telmofcosta.quicklookarchive;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -305,7 +305,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-larchive";
-				PRODUCT_BUNDLE_IDENTIFIER = local.quicklookarchive.app.preview;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.telmofcosta.quicklookarchive.preview;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = Extension/CArchive.h;
 			};
@@ -323,7 +323,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-larchive";
-				PRODUCT_BUNDLE_IDENTIFIER = local.quicklookarchive.app.preview;
+				PRODUCT_BUNDLE_IDENTIFIER = pt.telmofcosta.quicklookarchive.preview;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = Extension/CArchive.h;
 			};
