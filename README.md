@@ -1,4 +1,4 @@
-# ArchiveLook
+# QuickLookArchive
 
 A Quick Look extension for macOS that previews the contents of archive files. Press Space on an archive in Finder to see a tree of its files. Select a file in the tree to see its contents (text, images and PDF).
 
@@ -8,7 +8,7 @@ Archives are read with `libarchive`, which ships with macOS.
 
 ## Supported files
 
-Quick Look only hands ArchiveLook the file types that macOS already knows. These work:
+Quick Look only hands QuickLookArchive the file types that macOS already knows. These work:
 
 zip, tar, tar.gz / tgz, tar.bz2, tar.xz, gz, bz2, xz, 7z, cpio, xar, iso, epub: tested in Quick Look.
 
@@ -35,11 +35,11 @@ xcodegen
 To build:
 
 ```sh
-xcodebuild -project ArchiveLook.xcodeproj -scheme ArchiveLook \
+xcodebuild -project QuickLookArchive.xcodeproj -scheme QuickLookArchive \
   -configuration Debug -derivedDataPath build build
 ```
 
-The app is at `build/Build/Products/Debug/ArchiveLook.app`.
+The app is at `build/Build/Products/Debug/QuickLookArchive.app`.
 
 ## Install
 
@@ -49,11 +49,11 @@ Quick Look finds the extension inside an app, so the app must be copied to an Ap
 LSR=/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister
 
 mkdir -p ~/Applications
-rm -rf ~/Applications/ArchiveLook.app
-cp -R build/Build/Products/Debug/ArchiveLook.app ~/Applications/
-$LSR -f -R ~/Applications/ArchiveLook.app
-pluginkit -a ~/Applications/ArchiveLook.app/Contents/PlugIns/ArchiveLookPreview.appex
-pluginkit -e use -i local.archivelook.app.preview
+rm -rf ~/Applications/QuickLookArchive.app
+cp -R build/Build/Products/Debug/QuickLookArchive.app ~/Applications/
+$LSR -f -R ~/Applications/QuickLookArchive.app
+pluginkit -a ~/Applications/QuickLookArchive.app/Contents/PlugIns/QuickLookArchivePreview.appex
+pluginkit -e use -i local.quicklookarchive.app.preview
 killall quicklookd QuickLookUIService
 qlmanage -r
 ```
@@ -61,8 +61,8 @@ qlmanage -r
 To reinstall after a rebuild, run the same commands. If an old copy is registered, remove it first:
 
 ```sh
-$LSR -u ~/Applications/ArchiveLook.app
-pluginkit -r ~/Applications/ArchiveLook.app/Contents/PlugIns/ArchiveLookPreview.appex
+$LSR -u ~/Applications/QuickLookArchive.app
+pluginkit -r ~/Applications/QuickLookArchive.app/Contents/PlugIns/QuickLookArchivePreview.appex
 ```
 
 ## Try it
@@ -76,9 +76,9 @@ Or select an archive in Finder and press Space.
 ## Uninstall
 
 ```sh
-$LSR -u ~/Applications/ArchiveLook.app
-pluginkit -r ~/Applications/ArchiveLook.app/Contents/PlugIns/ArchiveLookPreview.appex
-rm -rf ~/Applications/ArchiveLook.app
+$LSR -u ~/Applications/QuickLookArchive.app
+pluginkit -r ~/Applications/QuickLookArchive.app/Contents/PlugIns/QuickLookArchivePreview.appex
+rm -rf ~/Applications/QuickLookArchive.app
 qlmanage -r
 ```
 

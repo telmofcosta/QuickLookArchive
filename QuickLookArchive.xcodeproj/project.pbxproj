@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2009DACFB84003E8EAB2E946 /* FilePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258784C22C97C116AD236C81 /* FilePreviewView.swift */; };
-		768EF7E099F8D862E1335B22 /* ArchiveLookPreview.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6228BE538A0F541A69784728 /* ArchiveLookPreview.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		813200C24309DCEF2D0755D4 /* ArchiveTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D471858B41FCB72F6F47B67 /* ArchiveTree.swift */; };
-		858695E53CC09AC0A451D367 /* ArchiveLookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED29205AAE6DF8006773411D /* ArchiveLookApp.swift */; };
-		BDB66571F33461FEE9B341F6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478807AB6D373F2D9A7F2D84 /* PreviewViewController.swift */; };
-		EBC9E5A95A8863F5DF1AD3DF /* ArchiveReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD2808B0AEC992113447DA /* ArchiveReader.swift */; };
+		02551FD1609A6A3219533270 /* FilePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2CE873F8BCED4BDCD485D6 /* FilePreviewView.swift */; };
+		0B9D2899C783C418AC382685 /* ArchiveReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632031BD4EF8EB1AA3B74CE /* ArchiveReader.swift */; };
+		1AB68AB39DD63AD7080BAC8D /* QuickLookArchiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A94B65D89033AF365FA5B7 /* QuickLookArchiveApp.swift */; };
+		8573F1A37529F53F937FAB8F /* ArchiveTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0580DA0212049999D4C3A5C2 /* ArchiveTree.swift */; };
+		AFF95F312D1D652ABA17F16E /* QuickLookArchivePreview.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 566C38CF3C7D60AFF805C0E9 /* QuickLookArchivePreview.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFE7619A0FFA6CA4C8BCD8F6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601FD0A44D0851421F4A35A2 /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA48A850A284D64B75595ED5 /* PBXContainerItemProxy */ = {
+		6179752C92F6937EDFBA54C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4F0B12B0BFFDD793FF700868 /* Project object */;
+			containerPortal = C7EFE7AF35B091D0CC244AD3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6F5199902AF42606B110BBF3;
-			remoteInfo = ArchiveLookPreview;
+			remoteGlobalIDString = A5E1CBCBAB2EC46A72C6F6ED;
+			remoteInfo = QuickLookArchivePreview;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0974EC96FAC7A3A3FF2F416D /* Embed Foundation Extensions */ = {
+		5B4F1A3F14D03EA5BFAF8477 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				768EF7E099F8D862E1335B22 /* ArchiveLookPreview.appex in Embed Foundation Extensions */,
+				AFF95F312D1D652ABA17F16E /* QuickLookArchivePreview.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,171 +40,171 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		258784C22C97C116AD236C81 /* FilePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePreviewView.swift; sourceTree = "<group>"; };
-		2D471858B41FCB72F6F47B67 /* ArchiveTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveTree.swift; sourceTree = "<group>"; };
-		38FD2808B0AEC992113447DA /* ArchiveReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveReader.swift; sourceTree = "<group>"; };
-		478807AB6D373F2D9A7F2D84 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
-		6228BE538A0F541A69784728 /* ArchiveLookPreview.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ArchiveLookPreview.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EEEF35EE3EEF2571954032B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		712FA2D84C4F892A652FCAEC /* CArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CArchive.h; sourceTree = "<group>"; };
-		9B5A2BC4795D54815CA74CD2 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
-		AFF8DFE46F7881BD4E0FF712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C16E8D38354F7816FA7A9551 /* ArchiveLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchiveLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED29205AAE6DF8006773411D /* ArchiveLookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveLookApp.swift; sourceTree = "<group>"; };
+		0580DA0212049999D4C3A5C2 /* ArchiveTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveTree.swift; sourceTree = "<group>"; };
+		36BAE14CEA23CFF65EC1BE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		50916ADE509B135E1F5DD9F6 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
+		566C38CF3C7D60AFF805C0E9 /* QuickLookArchivePreview.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickLookArchivePreview.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		58A94B65D89033AF365FA5B7 /* QuickLookArchiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookArchiveApp.swift; sourceTree = "<group>"; };
+		601FD0A44D0851421F4A35A2 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		87750E3AB3B40AC066ADD61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B5E0D7BE48A7B614351AB3DC /* CArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CArchive.h; sourceTree = "<group>"; };
+		B632031BD4EF8EB1AA3B74CE /* ArchiveReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveReader.swift; sourceTree = "<group>"; };
+		BA2CE873F8BCED4BDCD485D6 /* FilePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePreviewView.swift; sourceTree = "<group>"; };
+		FF60F5CBA7FACA03D3295968 /* QuickLookArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickLookArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		4E86E095FCC7CD48CDD7E1CA /* Products */ = {
+		6129438C772008E43CE79CB2 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C16E8D38354F7816FA7A9551 /* ArchiveLook.app */,
-				6228BE538A0F541A69784728 /* ArchiveLookPreview.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		78DE5802FEB6CD90A2AE4174 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				ED29205AAE6DF8006773411D /* ArchiveLookApp.swift */,
-				6EEEF35EE3EEF2571954032B /* Info.plist */,
+				87750E3AB3B40AC066ADD61F /* Info.plist */,
+				58A94B65D89033AF365FA5B7 /* QuickLookArchiveApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		8CDEA9A02A32CDCF9690690D = {
+		710EF9183C97596693385D0E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				78DE5802FEB6CD90A2AE4174 /* App */,
-				918DA24CB81CEB3FE01CC27F /* Extension */,
-				4E86E095FCC7CD48CDD7E1CA /* Products */,
+				FF60F5CBA7FACA03D3295968 /* QuickLookArchive.app */,
+				566C38CF3C7D60AFF805C0E9 /* QuickLookArchivePreview.appex */,
 			);
+			name = Products;
 			sourceTree = "<group>";
 		};
-		918DA24CB81CEB3FE01CC27F /* Extension */ = {
+		99B5698AE41CCEACC0EE3AE4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				38FD2808B0AEC992113447DA /* ArchiveReader.swift */,
-				2D471858B41FCB72F6F47B67 /* ArchiveTree.swift */,
-				712FA2D84C4F892A652FCAEC /* CArchive.h */,
-				9B5A2BC4795D54815CA74CD2 /* Extension.entitlements */,
-				258784C22C97C116AD236C81 /* FilePreviewView.swift */,
-				AFF8DFE46F7881BD4E0FF712 /* Info.plist */,
-				478807AB6D373F2D9A7F2D84 /* PreviewViewController.swift */,
+				B632031BD4EF8EB1AA3B74CE /* ArchiveReader.swift */,
+				0580DA0212049999D4C3A5C2 /* ArchiveTree.swift */,
+				B5E0D7BE48A7B614351AB3DC /* CArchive.h */,
+				50916ADE509B135E1F5DD9F6 /* Extension.entitlements */,
+				BA2CE873F8BCED4BDCD485D6 /* FilePreviewView.swift */,
+				36BAE14CEA23CFF65EC1BE31 /* Info.plist */,
+				601FD0A44D0851421F4A35A2 /* PreviewViewController.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F67CF59FBD61E98586B4BD12 = {
+			isa = PBXGroup;
+			children = (
+				6129438C772008E43CE79CB2 /* App */,
+				99B5698AE41CCEACC0EE3AE4 /* Extension */,
+				710EF9183C97596693385D0E /* Products */,
+			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6F5199902AF42606B110BBF3 /* ArchiveLookPreview */ = {
+		A441B2DBE6A2942D45FF2495 /* QuickLookArchive */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27BDB564DF38019F2A9A7391 /* Build configuration list for PBXNativeTarget "ArchiveLookPreview" */;
+			buildConfigurationList = 0F3467A0B898512AB299D366 /* Build configuration list for PBXNativeTarget "QuickLookArchive" */;
 			buildPhases = (
-				9C74D1FD8E7E08EF81F1B30E /* Sources */,
+				E3225E08642A4277C6B6335C /* Sources */,
+				5B4F1A3F14D03EA5BFAF8477 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7501992B33D5AB9843410CD7 /* PBXTargetDependency */,
 			);
-			name = ArchiveLookPreview;
+			name = QuickLookArchive;
 			packageProductDependencies = (
 			);
-			productName = ArchiveLookPreview;
-			productReference = 6228BE538A0F541A69784728 /* ArchiveLookPreview.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		C6D14A6C71B136780869B793 /* ArchiveLook */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6EA5B2A7E19D7390FD3B7746 /* Build configuration list for PBXNativeTarget "ArchiveLook" */;
-			buildPhases = (
-				0E8F3FEE1BEC216AD9AE6216 /* Sources */,
-				0974EC96FAC7A3A3FF2F416D /* Embed Foundation Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84F03F62BC1DA026CD5278CF /* PBXTargetDependency */,
-			);
-			name = ArchiveLook;
-			packageProductDependencies = (
-			);
-			productName = ArchiveLook;
-			productReference = C16E8D38354F7816FA7A9551 /* ArchiveLook.app */;
+			productName = QuickLookArchive;
+			productReference = FF60F5CBA7FACA03D3295968 /* QuickLookArchive.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A5E1CBCBAB2EC46A72C6F6ED /* QuickLookArchivePreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81E5FBB9F148334ACEAA2381 /* Build configuration list for PBXNativeTarget "QuickLookArchivePreview" */;
+			buildPhases = (
+				220B060BBD64C07B32E6DE6B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickLookArchivePreview;
+			packageProductDependencies = (
+			);
+			productName = QuickLookArchivePreview;
+			productReference = 566C38CF3C7D60AFF805C0E9 /* QuickLookArchivePreview.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F0B12B0BFFDD793FF700868 /* Project object */ = {
+		C7EFE7AF35B091D0CC244AD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					6F5199902AF42606B110BBF3 = {
+					A441B2DBE6A2942D45FF2495 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Manual;
 					};
-					C6D14A6C71B136780869B793 = {
+					A5E1CBCBAB2EC46A72C6F6ED = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = AA14B55A518E79BC33F69601 /* Build configuration list for PBXProject "ArchiveLook" */;
+			buildConfigurationList = BC207641ED857DC3E3B2B728 /* Build configuration list for PBXProject "QuickLookArchive" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
 				en,
 			);
-			mainGroup = 8CDEA9A02A32CDCF9690690D;
+			mainGroup = F67CF59FBD61E98586B4BD12;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 4E86E095FCC7CD48CDD7E1CA /* Products */;
+			productRefGroup = 710EF9183C97596693385D0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C6D14A6C71B136780869B793 /* ArchiveLook */,
-				6F5199902AF42606B110BBF3 /* ArchiveLookPreview */,
+				A441B2DBE6A2942D45FF2495 /* QuickLookArchive */,
+				A5E1CBCBAB2EC46A72C6F6ED /* QuickLookArchivePreview */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0E8F3FEE1BEC216AD9AE6216 /* Sources */ = {
+		220B060BBD64C07B32E6DE6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858695E53CC09AC0A451D367 /* ArchiveLookApp.swift in Sources */,
+				0B9D2899C783C418AC382685 /* ArchiveReader.swift in Sources */,
+				8573F1A37529F53F937FAB8F /* ArchiveTree.swift in Sources */,
+				02551FD1609A6A3219533270 /* FilePreviewView.swift in Sources */,
+				CFE7619A0FFA6CA4C8BCD8F6 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C74D1FD8E7E08EF81F1B30E /* Sources */ = {
+		E3225E08642A4277C6B6335C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBC9E5A95A8863F5DF1AD3DF /* ArchiveReader.swift in Sources */,
-				813200C24309DCEF2D0755D4 /* ArchiveTree.swift in Sources */,
-				2009DACFB84003E8EAB2E946 /* FilePreviewView.swift in Sources */,
-				BDB66571F33461FEE9B341F6 /* PreviewViewController.swift in Sources */,
+				1AB68AB39DD63AD7080BAC8D /* QuickLookArchiveApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		84F03F62BC1DA026CD5278CF /* PBXTargetDependency */ = {
+		7501992B33D5AB9843410CD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6F5199902AF42606B110BBF3 /* ArchiveLookPreview */;
-			targetProxy = FA48A850A284D64B75595ED5 /* PBXContainerItemProxy */;
+			target = A5E1CBCBAB2EC46A72C6F6ED /* QuickLookArchivePreview */;
+			targetProxy = 6179752C92F6937EDFBA54C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		132705964E3085FA3F9F11E9 /* Release */ = {
+		19F42FDB87F6FE4951B57D99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,7 +263,7 @@
 			};
 			name = Release;
 		};
-		2AA7D9158483E80A6C4528F3 /* Release */ = {
+		8622CCDEAB0E0A547078C2EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -273,27 +273,27 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = local.archivelook.app;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		4D6164E41FBDDD6778B4C00C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = App/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = local.archivelook.app;
+				PRODUCT_BUNDLE_IDENTIFIER = local.quicklookarchive.app;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		52E577F28C809912D6FEF5BF /* Debug */ = {
+		A72A0BBFA61898D9EAF2CD59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.quicklookarchive.app;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ABC68C1485DF6D4A6A4DAA0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
@@ -305,13 +305,31 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				OTHER_LDFLAGS = "-larchive";
-				PRODUCT_BUNDLE_IDENTIFIER = local.archivelook.app.preview;
+				PRODUCT_BUNDLE_IDENTIFIER = local.quicklookarchive.app.preview;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = Extension/CArchive.h;
 			};
 			name = Debug;
 		};
-		5C240A5E23DC9DF3BBE21BF4 /* Debug */ = {
+		CB391C2C5181D8255495DD78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				OTHER_LDFLAGS = "-larchive";
+				PRODUCT_BUNDLE_IDENTIFIER = local.quicklookarchive.app.preview;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Extension/CArchive.h;
+			};
+			name = Release;
+		};
+		F2D41025C2F42A61418C388B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -377,55 +395,37 @@
 			};
 			name = Debug;
 		};
-		AB4B5652505ED63469D9706E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Extension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				OTHER_LDFLAGS = "-larchive";
-				PRODUCT_BUNDLE_IDENTIFIER = local.archivelook.app.preview;
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = Extension/CArchive.h;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27BDB564DF38019F2A9A7391 /* Build configuration list for PBXNativeTarget "ArchiveLookPreview" */ = {
+		0F3467A0B898512AB299D366 /* Build configuration list for PBXNativeTarget "QuickLookArchive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52E577F28C809912D6FEF5BF /* Debug */,
-				AB4B5652505ED63469D9706E /* Release */,
+				8622CCDEAB0E0A547078C2EC /* Debug */,
+				A72A0BBFA61898D9EAF2CD59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		6EA5B2A7E19D7390FD3B7746 /* Build configuration list for PBXNativeTarget "ArchiveLook" */ = {
+		81E5FBB9F148334ACEAA2381 /* Build configuration list for PBXNativeTarget "QuickLookArchivePreview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D6164E41FBDDD6778B4C00C /* Debug */,
-				2AA7D9158483E80A6C4528F3 /* Release */,
+				ABC68C1485DF6D4A6A4DAA0C /* Debug */,
+				CB391C2C5181D8255495DD78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		AA14B55A518E79BC33F69601 /* Build configuration list for PBXProject "ArchiveLook" */ = {
+		BC207641ED857DC3E3B2B728 /* Build configuration list for PBXProject "QuickLookArchive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C240A5E23DC9DF3BBE21BF4 /* Debug */,
-				132705964E3085FA3F9F11E9 /* Release */,
+				F2D41025C2F42A61418C388B /* Debug */,
+				19F42FDB87F6FE4951B57D99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4F0B12B0BFFDD793FF700868 /* Project object */;
+	rootObject = C7EFE7AF35B091D0CC244AD3 /* Project object */;
 }

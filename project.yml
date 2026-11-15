@@ -1,6 +1,6 @@
-name: ArchiveLook
+name: QuickLookArchive
 options:
-  bundleIdPrefix: local.archivelook
+  bundleIdPrefix: local.quicklookarchive
   deploymentTarget:
     macOS: "14.0"
 settings:
@@ -10,29 +10,29 @@ settings:
     CODE_SIGN_IDENTITY: "-"
     DEVELOPMENT_TEAM: ""
 targets:
-  ArchiveLook:
+  QuickLookArchive:
     type: application
     platform: macOS
     sources: [App]
     info:
       path: App/Info.plist
       properties:
-        CFBundleDisplayName: ArchiveLook
+        CFBundleDisplayName: QuickLookArchive
         NSPrincipalClass: NSApplication
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: local.archivelook.app
+        PRODUCT_BUNDLE_IDENTIFIER: local.quicklookarchive.app
     dependencies:
-      - target: ArchiveLookPreview
+      - target: QuickLookArchivePreview
         embed: true
-  ArchiveLookPreview:
+  QuickLookArchivePreview:
     type: app-extension
     platform: macOS
     sources: [Extension]
     info:
       path: Extension/Info.plist
       properties:
-        CFBundleDisplayName: ArchiveLook Preview
+        CFBundleDisplayName: QuickLookArchive Preview
         NSExtension:
           NSExtensionPointIdentifier: com.apple.quicklook.preview
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).PreviewViewController
@@ -67,6 +67,6 @@ targets:
         com.apple.security.app-sandbox: true
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: local.archivelook.app.preview
+        PRODUCT_BUNDLE_IDENTIFIER: local.quicklookarchive.app.preview
         SWIFT_OBJC_BRIDGING_HEADER: Extension/CArchive.h
         OTHER_LDFLAGS: -larchive
