@@ -84,7 +84,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, NSOutline
             let type = node.isDirectory ? UTType.folder : (UTType(filenameExtension: (node.name as NSString).pathExtension) ?? .data)
             cell.imageView?.image = NSWorkspace.shared.icon(for: type)
         case "size":
-            cell.textField?.stringValue = node.isDirectory ? "" : ByteCountFormatter.string(fromByteCount: node.size, countStyle: .file)
+            cell.textField?.stringValue = node.isDirectory || node.size < 0 ? "" : ByteCountFormatter.string(fromByteCount: node.size, countStyle: .file)
         default:
             cell.textField?.stringValue = node.modified.map(dates.string(from:)) ?? ""
         }

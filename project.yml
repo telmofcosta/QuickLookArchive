@@ -14,12 +14,14 @@ targets:
     type: application
     platform: macOS
     sources: [App]
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: ArchiveLook
+        NSPrincipalClass: NSApplication
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: local.archivelook.app
-        GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: ArchiveLook
-        INFOPLIST_KEY_NSPrincipalClass: NSApplication
     dependencies:
       - target: ArchiveLookPreview
         embed: true
@@ -37,6 +39,26 @@ targets:
           NSExtensionAttributes:
             QLSupportedContentTypes:
               - public.zip-archive
+              - public.tar-archive
+              - org.gnu.gnu-zip-archive
+              - org.gnu.gnu-zip-tar-archive
+              - public.bzip2-archive
+              - public.tar-bzip2-archive
+              - org.tukaani.xz-archive
+              - org.tukaani.tar-xz-archive
+              - public.lzip-archive
+              - public.z-archive
+              - org.7-zip.7-zip-archive
+              - com.rarlab.rar-archive
+              - public.cpio-archive
+              - com.apple.xar-archive
+              - public.iso-image
+              - com.microsoft.cab
+              - public.archive.lha
+              - com.sun.java-archive
+              - com.sun.web-application-archive
+              - public.archive.apk
+              - org.idpf.epub-container
             QLSupportsSearchableItems: false
             QLIsDataBasedPreview: false
     entitlements:

@@ -29,6 +29,26 @@
 			<key>QLSupportedContentTypes</key>
 			<array>
 				<string>public.zip-archive</string>
+				<string>public.tar-archive</string>
+				<string>org.gnu.gnu-zip-archive</string>
+				<string>org.gnu.gnu-zip-tar-archive</string>
+				<string>public.bzip2-archive</string>
+				<string>public.tar-bzip2-archive</string>
+				<string>org.tukaani.xz-archive</string>
+				<string>org.tukaani.tar-xz-archive</string>
+				<string>public.lzip-archive</string>
+				<string>public.z-archive</string>
+				<string>org.7-zip.7-zip-archive</string>
+				<string>com.rarlab.rar-archive</string>
+				<string>public.cpio-archive</string>
+				<string>com.apple.xar-archive</string>
+				<string>public.iso-image</string>
+				<string>com.microsoft.cab</string>
+				<string>public.archive.lha</string>
+				<string>com.sun.java-archive</string>
+				<string>com.sun.web-application-archive</string>
+				<string>public.archive.apk</string>
+				<string>org.idpf.epub-container</string>
 			</array>
 			<key>QLSupportsSearchableItems</key>
 			<false/>
