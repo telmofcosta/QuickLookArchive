@@ -13,7 +13,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, NSOutline
     private var root = TreeNode(name: "", path: "", isDirectory: true)
 
     /// Largest file read into memory for the content pane.
-    private static let previewLimit = 8 << 20
+    private nonisolated static let previewLimit = 8 << 20
 
     private let dates: DateFormatter = {
         let f = DateFormatter()
