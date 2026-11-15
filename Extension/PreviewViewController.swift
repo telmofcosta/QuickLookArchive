@@ -5,7 +5,15 @@ import UniformTypeIdentifiers
 class PreviewViewController: NSViewController, QLPreviewingController, NSOutlineViewDataSource, NSOutlineViewDelegate {
     private let outline = NSOutlineView()
     private let notice = NSTextField(labelWithString: "")
-    private var root = TreeNode(name: "", isDirectory: true)
+    private let detail = FilePreviewView()
+    private let split = NSSplitView()
+    private var didSizeSplit = false
+    private var archiveURL: URL?
+    private var readTask: Task<Void, Never>?
+    private var root = TreeNode(name: "", path: "", isDirectory: true)
+
+    /// Largest file read into memory for the content pane.
+    private static let previewLimit = 8 << 20
 
     private let dates: DateFormatter = {
         let f = DateFormatter()
@@ -23,6 +31,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, NSOutline
         }
         outline.outlineTableColumn = outline.tableColumns[0]
         outline.usesAlternatingRowBackgroundColors = true
+        outline.columnAutoresizingStyle = .firstColumnOnlyAutoresizingStyle
         outline.dataSource = self
         outline.delegate = self
 
@@ -37,7 +46,21 @@ class PreviewViewController: NSViewController, QLPreviewingController, NSOutline
         stack.orientation = .vertical
         stack.spacing = 4
         stack.edgeInsets = NSEdgeInsets(top: 0, left: 0, bottom: 4, right: 0)
-        view = stack
+
+        split.isVertical = true
+        split.dividerStyle = .thin
+        split.addArrangedSubview(stack)
+        split.addArrangedSubview(detail)
+        view = split
+        preferredContentSize = NSSize(width: 960, height: 560)
+    }
+
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        if !didSizeSplit, split.bounds.width > 0 {
+            didSizeSplit = true
+            split.setPosition(split.bounds.width * 0.45, ofDividerAt: 0)
+        }
     }
 
     func preparePreviewOfFile(at url: URL) async throws {
@@ -45,6 +68,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, NSOutline
         let tree = TreeNode.build(from: entries)
 
         await MainActor.run {
+            archiveURL = url
             root = tree
             notice.stringValue = "Listing truncated"
             notice.isHidden = !truncated
@@ -52,6 +76,34 @@ class PreviewViewController: NSViewController, QLPreviewingController, NSOutline
             // Collapsed by default; a single root folder is expanded.
             if tree.children.count == 1, tree.children[0].isDirectory {
                 outline.expandItem(tree.children[0])
+            }
+        }
+    }
+
+    // MARK: Selection
+
+    func outlineViewSelectionDidChange(_ notification: Notification) {
+        readTask?.cancel()
+        guard let node = outline.item(atRow: outline.selectedRow) as? TreeNode, let url = archiveURL else {
+            detail.showMessage("Select a file to preview")
+            return
+        }
+        if node.isDirectory {
+            detail.showMessage("Select a file to preview")
+            return
+        }
+
+        detail.showMessage("Loading…")
+        let (path, name, detail) = (node.path, node.name, detail)
+        readTask = Task.detached {
+            let result = Result { try ArchiveReader.read(url: url, path: path, limit: Self.previewLimit) }
+            if Task.isCancelled { return }
+            await MainActor.run {
+                switch result {
+                case .success(let file?): detail.show(data: file.data, name: name, truncated: file.truncated)
+                case .success(nil): detail.showMessage("File not found in archive")
+                case .failure(let error): detail.showMessage(error.localizedDescription)
+                }
             }
         }
     }

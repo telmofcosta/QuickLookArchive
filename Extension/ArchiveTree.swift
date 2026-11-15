@@ -2,29 +2,33 @@ import Foundation
 
 final class TreeNode {
     let name: String
+    /// Normalised path inside the archive; "" for the root.
+    let path: String
     var isDirectory: Bool
     var size: Int64 = 0
     var modified: Date?
     private(set) var children: [TreeNode] = []
     private var lookup: [String: TreeNode] = [:]
 
-    init(name: String, isDirectory: Bool) {
+    init(name: String, path: String, isDirectory: Bool) {
         self.name = name
+        self.path = path
         self.isDirectory = isDirectory
     }
 
     /// Builds a tree from flat archive paths. Folders missing from the archive are created implicitly.
     static func build(from entries: [ArchiveEntry]) -> TreeNode {
-        let root = TreeNode(name: "", isDirectory: true)
+        let root = TreeNode(name: "", path: "", isDirectory: true)
         for entry in entries {
-            let parts = entry.path.split(separator: "/").filter { $0 != "." }.map(String.init)
+            let parts = ArchiveReader.normalize(entry.path).split(separator: "/").map(String.init)
             guard !parts.isEmpty else { continue }
 
             var node = root
             for (i, part) in parts.enumerated() {
                 let isLast = i == parts.count - 1
                 let child = node.lookup[part] ?? {
-                    let c = TreeNode(name: part, isDirectory: !isLast || entry.isDirectory)
+                    let c = TreeNode(name: part, path: node.path.isEmpty ? part : node.path + "/" + part,
+                                     isDirectory: !isLast || entry.isDirectory)
                     node.lookup[part] = c
                     node.children.append(c)
                     return c
