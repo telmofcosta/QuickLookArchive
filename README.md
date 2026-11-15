@@ -4,6 +4,8 @@ A Quick Look extension for macOS that previews the contents of archive files. Pr
 
 Archives are read with `libarchive`, which ships with macOS.
 
+![A 7z archive in Quick Look: file tree on the left, the selected PNG on the right](docs/preview.png)
+
 ## Supported files
 
 Quick Look only hands ArchiveLook the file types that macOS already knows. These work:
